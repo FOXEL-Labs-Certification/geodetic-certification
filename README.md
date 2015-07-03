@@ -1,10 +1,10 @@
 
-## Laboratory of Certification <br /> Geodesic certification
+## Laboratory of Certification <br /> Geodetic certification
 
 <p align="justify">
 The geodetic department of the laboratory of certification is committed to the
-establishment of certification procedure that are able to validate and quantify
-the quality of FOXEL photogrammetric results from the geodesy point of view. 
+establishment of certification procedures that are able to validate and quantify
+the quality of FOXEL photogrammetric results from a geodetic point of view. 
 </p>
 
 <p align="justify">

@@ -7,9 +7,6 @@ establishment of certification procedures that are able to validate and quantify
 the quality of FOXEL photogrammetric results from a geodetic point of view. 
 </p>
 
-<p align="justify">
-</p>
-
 ### Copyright
 
 Copyright (c) 2013-2015 FOXEL SA - [http://foxel.ch](http://foxel.ch)<br />

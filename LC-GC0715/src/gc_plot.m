@@ -47,7 +47,7 @@
 
         % Plot configuration %
         set( gca, 'linewidth', 2 );
-        set( gca, 'fontsize', 12 );
+        set( gca, 'fontsize', 24 );
 
         % Plot configuration %
         set( gca, 'YDir', 'reverse' );

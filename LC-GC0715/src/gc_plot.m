@@ -52,8 +52,21 @@
         % Plot configuration %
         set( gca, 'YDir', 'reverse' );
 
-        % Display background target %
-        gc_plot_area( 0.1 );
+        % Display tolerence circles %
+        plot( [-1:0.01:+1]*0.2, +sin(acos([-1:0.01:+1]))*0.2, 'Color', [ 0.9, 0.3, 0.1 ], 'LineWidth', 2 );
+        plot( [-1:0.01:+1]*0.2, -sin(acos([-1:0.01:+1]))*0.2, 'Color', [ 0.9, 0.3, 0.1 ], 'LineWidth', 2 );
+        plot( [-1:0.01:+1]*0.1, +sin(acos([-1:0.01:+1]))*0.1, 'Color', [ 0.1, 0.7, 0.4 ], 'LineWidth', 2 );
+        plot( [-1:0.01:+1]*0.1, -sin(acos([-1:0.01:+1]))*0.1, 'Color', [ 0.1, 0.7, 0.4 ], 'LineWidth', 2 );
+
+        % Display tolerence areas %
+        plot( [ -0.3, +0.3 ], [ +0.1, +0.1 ], '-', 'Color', [ 0.1, 0.7, 0.4 ], 'LineWidth', 2 );
+        plot( [ -0.3, +0.3 ], [ -0.1, -0.1 ], '-', 'Color', [ 0.1, 0.7, 0.4 ], 'LineWidth', 2 );
+        plot( [ +0.1, +0.1 ], [ -0.3, +0.3 ], '-', 'Color', [ 0.1, 0.7, 0.4 ], 'LineWidth', 2 );
+        plot( [ -0.1, -0.1 ], [ -0.3, +0.3 ], '-', 'Color', [ 0.1, 0.7, 0.4 ], 'LineWidth', 2 );
+        plot( [ -0.3, +0.3 ], [ +0.2, +0.2 ], '-', 'Color', [ 0.9, 0.3, 0.1 ], 'LineWidth', 2 );
+        plot( [ -0.3, +0.3 ], [ -0.2, -0.2 ], '-', 'Color', [ 0.9, 0.3, 0.1 ], 'LineWidth', 2 );
+        plot( [ +0.2, +0.2 ], [ -0.3, +0.3 ], '-', 'Color', [ 0.9, 0.3, 0.1 ], 'LineWidth', 2 );
+        plot( [ -0.2, -0.2 ], [ -0.3, +0.3 ], '-', 'Color', [ 0.9, 0.3, 0.1 ], 'LineWidth', 2 );
 
         % Display error - vector %
         plot( [ 0 gcError(1) ], [ 0 gcError(2) ], ':k', 'linewidth', 2 );
@@ -73,54 +86,6 @@
 
         % Export plot %
         if ( length( gcFile ) > 0 ); print( '-depsc', '-r300', '-F24', gcFile ); end
-
-    end
-
-    function gc_plot_area( gcTolerence )
-
-        % Create area plot %
-        gcx = [-1:0.01:1] * gcTolerence * 2;
-        gcu = [ ...
-              + zeros( 1, length( gcx ) ); ...
-              - sin( acos( [-1:0.01:1] ) ) * gcTolerence * 2, ...
-              ];
-        gcd = [ ...
-              + zeros( 1, length( gcx ) ); ...
-              + sin( acos( [-1:0.01:1] ) ) * gcTolerence * 2, ...
-              ];
-
-        % Display target circle %
-        gcHU = area( gcx, gcu', 'EdgeColor', 'None', 'LineStyle', ':', 'Linewidth', 2 );
-        gcHD = area( gcx, gcd', 'EdgeColor', 'None', 'LineStyle', ':', 'Linewidth', 2 );
-
-        % Configuration %
-        set( gcHU(2), 'FaceColor', [ 0.9 0.9 0.9 ] );
-        set( gcHD(2), 'FaceColor', [ 0.9 0.9 0.9 ] );
-
-        % Create area plot %
-        gcx = [-1:0.01:1] * gcTolerence;
-        gcu = [ ...
-              + zeros( 1, length( gcx ) ); ...
-              - sin( acos( [-1:0.01:1] ) ) * gcTolerence, ...
-              ];
-        gcd = [ ...
-              + zeros( 1, length( gcx ) ); ...
-              + sin( acos( [-1:0.01:1] ) ) * gcTolerence, ...
-              ];
-
-        % Display target circle %
-        gcHU = area( gcx, gcu', 'EdgeColor', 'None', 'LineStyle', ':', 'Linewidth', 2 );
-        gcHD = area( gcx, gcd', 'EdgeColor', 'None', 'LineStyle', ':', 'Linewidth', 2 );
-
-        % Configuration %
-        set( gcHU(2), 'FaceColor', [ 0.6 0.6 0.6 ] );
-        set( gcHD(2), 'FaceColor', [ 0.6 0.6 0.6 ] );
-
-        % Display borders %
-        plot( [-1:0.01:+1]*0.2, +sin(acos([-1:0.01:+1]))*0.2, 'Color', [ 0.9, 0.3, 0.1 ], 'LineWidth', 2 );
-        plot( [-1:0.01:+1]*0.2, -sin(acos([-1:0.01:+1]))*0.2, 'Color', [ 0.9, 0.3, 0.1 ], 'LineWidth', 2 );
-        plot( [-1:0.01:+1]*0.1, +sin(acos([-1:0.01:+1]))*0.1, 'Color', [ 0.1, 0.7, 0.4 ], 'LineWidth', 2 );
-        plot( [-1:0.01:+1]*0.1, -sin(acos([-1:0.01:+1]))*0.1, 'Color', [ 0.1, 0.7, 0.4 ], 'LineWidth', 2 );
 
     end
 

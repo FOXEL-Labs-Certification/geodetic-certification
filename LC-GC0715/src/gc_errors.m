@@ -80,15 +80,15 @@
         printf( 'o4p3 = ( %f, %f ) : %f\n', gco4p3e(1), gco4p3e(2), gco4p3e(3) );
 
         % Export graphics - planimetry %
-        gc_plot( gco1p1e, 'Objet 1, Nuage 1 - Absolute error', '../dev/plots/eo1p1.eps' );
-        gc_plot( gco1p2e, 'Objet 1, Nuage 2 - Absolute error', '../dev/plots/eo1p2.eps' );
-        gc_plot( gco1p3e, 'Objet 1, Nuage 3 - Absolute error', '../dev/plots/eo1p3.eps' );
-        gc_plot( gco2p1e, 'Objet 2, Nuage 1 - Absolute error', '../dev/plots/eo2p1.eps' );
-        gc_plot( gco2p2e, 'Objet 2, Nuage 2 - Absolute error', '../dev/plots/eo2p2.eps' );
-        gc_plot( gco2p3e, 'Objet 2, Nuage 3 - Absolute error', '../dev/plots/eo2p3.eps' );
-        gc_plot( gco3p2e, 'Objet 3, Nuage 2 - Absolute error', '../dev/plots/eo3p2.eps' );
-        gc_plot( gco3p3e, 'Objet 3, Nuage 3 - Absolute error', '../dev/plots/eo3p3.eps' );
-        gc_plot( gco4p3e, 'Objet 4, Nuage 3 - Absolute error', '../dev/plots/eo4p3.eps' );
+        gc_plot( gco1p1e, 'Object 1, Cloud 1 - Absolute error', '../dev/plots/eo1p1.eps' );
+        gc_plot( gco1p2e, 'Object 1, Cloud 2 - Absolute error', '../dev/plots/eo1p2.eps' );
+        gc_plot( gco1p3e, 'Object 1, Cloud 3 - Absolute error', '../dev/plots/eo1p3.eps' );
+        gc_plot( gco2p1e, 'Object 2, Cloud 1 - Absolute error', '../dev/plots/eo2p1.eps' );
+        gc_plot( gco2p2e, 'Object 2, Cloud 2 - Absolute error', '../dev/plots/eo2p2.eps' );
+        gc_plot( gco2p3e, 'Object 2, Cloud 3 - Absolute error', '../dev/plots/eo2p3.eps' );
+        gc_plot( gco3p2e, 'Object 3, Cloud 2 - Absolute error', '../dev/plots/eo3p2.eps' );
+        gc_plot( gco3p3e, 'Object 3, Cloud 3 - Absolute error', '../dev/plots/eo3p3.eps' );
+        gc_plot( gco4p3e, 'Object 4, Cloud 3 - Absolute error', '../dev/plots/eo4p3.eps' );
 
     end
 

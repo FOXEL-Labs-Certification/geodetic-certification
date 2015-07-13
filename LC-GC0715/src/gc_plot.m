@@ -71,9 +71,13 @@
         % Display error - vector %
         plot( [ 0 gcError(1) ], [ 0 gcError(2) ], ':k', 'linewidth', 2 );
 
+        % Display error - components %
+        plot( [ gcError(1) gcError(1) ], [ 0 gcError(2) ], ':k', 'linewidth', 2 );
+        plot( [ 0 gcError(1) ], [ gcError(2) gcError(2) ], ':k', 'linewidth', 2 );
+
         % Display error - point %
         plot( gcError(1), gcError(2), 'ok', 'markersize', 8, 'MarkerFaceColor', 'k' );
-        
+
         % Axis legends %
         xlabel( 'E [m]' );
         ylabel( 'N [m]' );
@@ -82,7 +86,7 @@
         axis( [ -.3 .3 -.3 .3 ], 'Square' );
 
         % Display title %
-        title( [ gcTitle ' : ' num2str( gcError(3) ) 'm' ] );
+        title( [ gcTitle ' - Radial = ' num2str( gcError(3) ) 'm' ] );
 
         % Export plot %
         if ( length( gcFile ) > 0 ); print( '-depsc', '-r300', '-F24', gcFile ); end
